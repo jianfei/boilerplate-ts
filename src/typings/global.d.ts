@@ -19,7 +19,6 @@ declare global {
     const Loadable: any
     const Mobx: typeof _Mobx
     const MobxReact: typeof _MobxReact
-    // Rx: 'rxjs/Rx',
     // Transition: 'react-transition-group/Transition',
     // CSSTransition: 'react-transition-group/CSSTransition',
     // TransitionGroup: 'react-transition-group/TransitionGroup',

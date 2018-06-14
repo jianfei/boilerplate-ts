@@ -3,6 +3,7 @@ const entry = require('./webpack/entry');
 const modules = require('./webpack/module');
 const plugins = require('./webpack/plugins');
 const optimization = require('./webpack/optimization');
+const rxPaths = require('rxjs/_esm5/path-mapping');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -11,7 +12,7 @@ module.exports = {
     module: modules,
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
-        alias: {
+        alias: Object.assign(rxPaths(), {
             app: resolve('./src/app'),
             components: resolve('./src/components'),
             config: resolve('./src/config'),
@@ -21,7 +22,7 @@ module.exports = {
             pages: resolve('./src/pages'),
             services: resolve('./src/services'),
             utils: resolve('./src/utils'),
-        },
+        }),
         modules: ['node_modules'],
     },
     output: {

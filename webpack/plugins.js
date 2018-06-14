@@ -47,7 +47,6 @@ const providePluginInstance = new webpack.ProvidePlugin({
     Loadable: 'react-loadable',
     Mobx: 'mobx',
     MobxReact: 'mobx-react',
-    Rx: 'rxjs/Rx',
     Transition: 'react-transition-group/Transition',
     CSSTransition: 'react-transition-group/CSSTransition',
     TransitionGroup: 'react-transition-group/TransitionGroup',
@@ -55,7 +54,6 @@ const providePluginInstance = new webpack.ProvidePlugin({
     axios: 'axios',
     classnames: 'classnames',
     i18n: ['i18n', 'default'],
-    // _: 'lodash', // 按需加载
     log: ['utils/logger', 'default'],
     qs: 'qs',
     switcher: 'switch-js',

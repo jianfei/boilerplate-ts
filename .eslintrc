@@ -14,7 +14,6 @@
         "Mobx": true,
         "MobxReact": true,
         "Loadable": true,
-        "Rx": true,
         "Transition": true,
         "CSSTransition": true,
         "TransitionGroup": true,

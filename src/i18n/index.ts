@@ -1,5 +1,5 @@
-import _get from 'lodash-es/get'
-import _mapValues from 'lodash-es/mapValues'
+import get from 'lodash-es/get'
+import mapValues from 'lodash-es/mapValues'
 import store from 'models'
 
 const { reaction } = Mobx
@@ -14,7 +14,7 @@ function updateTemplates(): void {
             log('app:i18n', `加载语言包(${runtime.locale})成功`)
 
             if (IS_DEV) {
-                window.i18nStats = _mapValues(templates, () => 0)
+                window.i18nStats = mapValues(templates, () => 0)
             }
 
             runtime.setI18nTemplates(templates)
@@ -24,7 +24,7 @@ function updateTemplates(): void {
 function i18n(key: string, ...args: string[]): string {
     const { i18nTemplates } = runtime
 
-    if (_get(i18nTemplates, key)) {
+    if (get(i18nTemplates, key)) {
         if (IS_DEV && window.i18nStats) {
             window.i18nStats[key] += 1
         }
