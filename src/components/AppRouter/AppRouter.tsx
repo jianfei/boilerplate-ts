@@ -1,19 +1,19 @@
 import PageHome from 'pages/Home'
+import * as React from 'react'
+import { BrowserRouter, HashRouter, Route } from 'react-router-dom'
 
-const { Fragment } = React
-const { BrowserRouter, HashRouter, Route } = ReactRouter
 const Router = IS_DEV ? HashRouter : BrowserRouter
 
 export default class AppRouter extends React.Component<object> {
     public render(): JSX.Element {
         return (
-            <Fragment>
+            <React.Fragment>
                 <Router>
-                    <Fragment>
+                    <React.Fragment>
                         <Route exact path="/" component={PageHome} />
-                    </Fragment>
+                    </React.Fragment>
                 </Router>
-            </Fragment>
+            </React.Fragment>
         )
     }
 }

@@ -1,10 +1,10 @@
 import config from 'config'
 import get from 'lodash-es/get'
-
-const { observable, action } = Mobx
+import { action, observable } from 'mobx'
+import * as qs from 'querystring'
 
 const query = window.location.search.slice(1) || window.location.hash.split('?')[1]
-const localeFromQuery = get(qs.parse(query), 'locale')
+const localeFromQuery = get(qs.parse(query), 'locale') as string
 const localeFromLocalStorage = localStorage.getItem('locale')
 
 export default class Runtime implements IRuntime.Class {

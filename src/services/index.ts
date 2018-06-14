@@ -1,3 +1,4 @@
+import axios from 'axios'
 import config from 'config'
 
 const baseURL = IS_DEV ? config.mockServer : config.liveServer

@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import store from 'models'
 
 const { runtime } = store

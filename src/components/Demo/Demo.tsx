@@ -1,5 +1,7 @@
 import './Demo.less'
 
+import * as React from 'react'
+
 interface DemoProps {
     children?: JSX.Element
 }

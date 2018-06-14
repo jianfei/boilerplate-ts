@@ -1,6 +1,8 @@
 import './Home.less'
 
-const { inject, observer } = MobxReact
+import i18n from 'i18n'
+import { inject, observer } from 'mobx-react'
+import * as React from 'react'
 
 @inject('runtime')
 @observer

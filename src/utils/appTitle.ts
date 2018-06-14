@@ -1,12 +1,13 @@
 import createBrowserHistory, { BrowserHistoryBuildOptions } from 'history/createBrowserHistory'
 import createHashHistory, { HashHistoryBuildOptions } from 'history/createHashHistory'
+import i18n from 'i18n'
+import { reaction } from 'mobx'
 import store from 'models'
 
 const DEFAULT_TITLE = 'app.title'
 const TITLE_MAP: IUtils.TitleMap = {}
 
 const { runtime } = store
-const { reaction } = Mobx
 const createHistory: any = IS_DEV ? createHashHistory : createBrowserHistory
 const history = createHistory()
 

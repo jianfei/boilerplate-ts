@@ -1,10 +1,10 @@
 import AppRouter from 'components/AppRouter'
+import { observer, Provider } from 'mobx-react'
 import store from 'models'
+import * as React from 'react'
 import { hot } from 'react-hot-loader'
 import appProps from 'utils/appProps'
 import 'utils/appTitle'
-
-const { Provider, observer } = MobxReact
 
 @observer
 class App extends React.Component<object> {

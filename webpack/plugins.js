@@ -40,25 +40,6 @@ const htmlWebpackPluginInstances = Object.keys(entry).map(name => {
         minify,
     });
 });
-const providePluginInstance = new webpack.ProvidePlugin({
-    React: 'react',
-    ReactDOM: 'react-dom',
-    ReactRouter: 'react-router-dom',
-    Loadable: 'react-loadable',
-    Mobx: 'mobx',
-    MobxReact: 'mobx-react',
-    Transition: 'react-transition-group/Transition',
-    CSSTransition: 'react-transition-group/CSSTransition',
-    TransitionGroup: 'react-transition-group/TransitionGroup',
-
-    axios: 'axios',
-    classnames: 'classnames',
-    i18n: ['i18n', 'default'],
-    log: ['utils/logger', 'default'],
-    qs: 'qs',
-    switcher: 'switch-js',
-    template: 'string-template',
-});
 const definePluginInstance = new webpack.DefinePlugin({
     IS_DEV: isDevelopment,
 });
@@ -75,7 +56,6 @@ const plugins = [];
 const commonPlugins = [
     ...happypackInstances,
     ...htmlWebpackPluginInstances,
-    providePluginInstance,
     definePluginInstance,
     new CheckerPlugin(),
     new ExtractTextPlugin('[name].css'),
