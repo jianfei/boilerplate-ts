@@ -1,5 +1,5 @@
-import Runtime from './Runtime';
+import Runtime from './Runtime'
 
 export default {
     runtime: new Runtime(),
-};
+}

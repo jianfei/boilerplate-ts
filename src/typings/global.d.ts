@@ -3,6 +3,9 @@ import * as _ReactDOM from 'react-dom'
 import * as _ReactRouter from 'react-router-dom'
 import * as _Mobx from 'mobx'
 import * as _MobxReact from 'mobx-react'
+import _axios from 'axios'
+import * as _classnames from 'classnames'
+import * as _qs from 'qs'
 
 declare global {
     interface Window {
@@ -23,11 +26,11 @@ declare global {
     // CSSTransition: 'react-transition-group/CSSTransition',
     // TransitionGroup: 'react-transition-group/TransitionGroup',
 
-    // axios: 'axios',
-    // classnames: 'classnames',
+    const axios: typeof _axios
+    const classnames: typeof _classnames
     const i18n: (key: string, ...args: string[]) => string
     const log: (key: string, content: string) => void
-    // qs: 'qs',
+    const qs: typeof _qs
     // switcher: 'switch-js',
     const template: (template: string, ...args: any[]) => string
 }

@@ -21,7 +21,7 @@ function updateTemplates(): void {
         })
 }
 
-function i18n(key: string, ...args: string[]): string {
+function i18n(key: string, ...args: any[]): string {
     const { i18nTemplates } = runtime
 
     if (get(i18nTemplates, key)) {

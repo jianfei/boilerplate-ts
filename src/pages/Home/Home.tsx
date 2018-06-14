@@ -1,7 +1,5 @@
 import './Home.less'
 
-import i18n from 'i18n'
-
 const { inject, observer } = MobxReact
 
 @inject('runtime')
